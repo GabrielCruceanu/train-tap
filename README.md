@@ -25,7 +25,7 @@ TrainTap is a cutting-edge application designed to revolutionize the way fitness
 1. Clone the repository:
 
    ```sh
-   git clone https://github.com/yourusername/traintap.git
+   git clone https://github.com/kaapo-studio/train-tap.git
    ```
 
 2. Navigate to the project directory:
@@ -76,4 +76,4 @@ Distributed under the MIT License. See `LICENSE` for more information.
 
 Your Name - <contact@traintap.io>
 
-Project Link: [https://github.com/yourusername/traintap](https://github.com/yourusername/traintap)
+Project Link: [https://github.com/kaapo-studio/train-tap](https://github.com/kaapo-studio/train-tap)
