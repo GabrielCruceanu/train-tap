@@ -1,4 +1,4 @@
-import { nextui } from "@nextui-org/theme";
+const {nextui} = require('@nextui-org/theme');
 
 /** @type {import('tailwindcss').Config} */
 module.exports = {
@@ -33,64 +33,27 @@ module.exports = {
     },
   },
   darkMode: "class",
-  plugins: [
-    nextui({
+  plugins: [nextui({
       // themes: {
       //   light: {
       //     colors: {
-      //       background: "#FFFFFF", // or DEFAULT
-      //       foreground: "#11181C", // or 50 to 900 DEFAULT
-      //       content1: "#FFFFFF", // or
+      //       background: #FFFFFF, // or DEFAULT
+      //       foreground: #11181C, // or 50 to 900 DEFAULT
+      //       content1: #FFFFFF, // or
       //       primary: {
       //         //... 50 to 900
-      //         foreground: "#FFFFFF",
-      //         DEFAULT: "#84cc16",
-      //         50: "#f7fee7",
-      //         100: "#ecfccb",
-      //         200: "#d9f99d",
-      //         300: "#bef264",
-      //         400: "#a3e635",
-      //         500: "#84cc16",
-      //         600: "#65a30d",
-      //         700: "#4d7c0f",
-      //         800: "#3f6212",
-      //         900: "#365314",
-      //       }, // ... rest of the colors
-      //     },
-      //   },
-      //   dark: {
+      //         foreground: #FFFFFF,//         DEFAULT: #84cc16,//         50: #f7fee7,//         100: #ecfccb,//         200: #d9f99d,//         300: #bef264,//         400: #a3e635,//         500: #84cc16,//         600: #65a30d,//         700: #4d7c0f,//         800: #3f6212,//         900: #365314,//       }, // ... rest of the colors
+      //     },//   },//   dark: {
       //     colors: {
-      //       background: "#000000", // or DEFAULT
-      //       foreground: "#ECEDEE", // or 50 to 900 DEFAULT
-      //       content1: "#000000", // or
+      //       background: #000000, // or DEFAULT
+      //       foreground: #ECEDEE, // or 50 to 900 DEFAULT
+      //       content1: #000000, // or
       //       primary: {
       //         //... 50 to 900
-      //         foreground: "#FFFFFF",
-      //         DEFAULT: "#84cc16",
-      //         50: "#f7fee7",
-      //         100: "#ecfccb",
-      //         200: "#d9f99d",
-      //         300: "#bef264",
-      //         400: "#a3e635",
-      //         500: "#84cc16",
-      //         600: "#65a30d",
-      //         700: "#4d7c0f",
-      //         800: "#3f6212",
-      //         900: "#365314",
-      //       },
-      //     }, // ... rest of the colors
+      //         foreground: #FFFFFF,//         DEFAULT: #84cc16,//         50: #f7fee7,//         100: #ecfccb,//         200: #d9f99d,//         300: #bef264,//         400: #a3e635,//         500: #84cc16,//         600: #65a30d,//         700: #4d7c0f,//         800: #3f6212,//         900: #365314,//       },//     }, // ... rest of the colors
       //   }, // mytheme: {
       //   //   // custom theme
-      //   //   extend: "dark",
-      //   //   colors: {
+      //   //   extend: dark,//   //   colors: {
       //   //     primary: {
-      //   //       DEFAULT: "#84cc16",
-      //   //       foreground: "#000000",
-      //   //     },
-      //   //     focus: "#84cc16",
-      //   //   },
-      //   // },
-      // },
-    }),
-  ],
+      //   //       DEFAULT: #84cc16,//   //       foreground: #000000,//   //     },//   //     focus: #84cc16,//   //   },//   // },// },}),nextui()],
 };
