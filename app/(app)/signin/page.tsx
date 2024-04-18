@@ -6,12 +6,14 @@ import { Icon } from "@iconify/react";
 import { AcmeIcon } from "@/components/icons/social";
 import { Link } from "@nextui-org/link";
 import { Button } from "@nextui-org/button";
-import { Checkbox, Divider, User } from "@nextui-org/react";
 import { Input } from "@nextui-org/input";
 import { createClientComponentClient } from "@supabase/auth-helpers-nextjs";
 import toast from "react-hot-toast";
 import { Provider } from "@supabase/supabase-js";
 import config from "../../../config";
+import { User } from "@nextui-org/user";
+import { Divider } from "@nextui-org/divider";
+import { Checkbox } from "@nextui-org/checkbox";
 
 export default function Component() {
   const supabase = createClientComponentClient();
