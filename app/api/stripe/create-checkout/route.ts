@@ -19,7 +19,7 @@ export async function POST(req: NextRequest) {
     if (!session) {
       return NextResponse.json(
         { error: "You must be logged in to make a purchase." },
-        { status: 401 }
+        { status: 401 },
       );
     }
 
@@ -30,12 +30,12 @@ export async function POST(req: NextRequest) {
     if (!priceId) {
       return NextResponse.json(
         { error: "Price ID is required" },
-        { status: 400 }
+        { status: 400 },
       );
     } else if (!successUrl || !cancelUrl) {
       return NextResponse.json(
         { error: "Success and cancel URLs are required" },
-        { status: 400 }
+        { status: 400 },
       );
     } else if (!body.mode) {
       return NextResponse.json(
@@ -43,7 +43,7 @@ export async function POST(req: NextRequest) {
           error:
             "Mode is required (either 'payment' for one-time payments or 'subscription' for recurring subscription)",
         },
-        { status: 400 }
+        { status: 400 },
       );
     }
 
@@ -81,7 +81,7 @@ export async function POST(req: NextRequest) {
     });
 
     return NextResponse.json({ url: stripeSessionURL });
-  } catch (e) {
+  } catch (e: any) {
     console.error(e);
     return NextResponse.json({ error: e?.message }, { status: 500 });
   }

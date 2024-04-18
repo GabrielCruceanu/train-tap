@@ -24,7 +24,7 @@ export async function POST(req: { json: () => any }) {
         .select();
 
       return NextResponse.json({ data }, { status: 200 });
-    } catch (e) {
+    } catch (e: any) {
       console.error(e);
       return NextResponse.json(
         { error: "Something went wrong" },

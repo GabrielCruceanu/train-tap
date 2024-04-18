@@ -16,7 +16,7 @@ export async function POST(req: NextRequest) {
     await supabase.from("leads").insert({ email: body.email });
 
     return NextResponse.json({});
-  } catch (e) {
+  } catch (e: any) {
     console.error(e);
     return NextResponse.json({ error: e.message }, { status: 500 });
   }

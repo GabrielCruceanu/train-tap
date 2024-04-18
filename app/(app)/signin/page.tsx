@@ -3,7 +3,7 @@
 import { useState } from "react";
 import { Icon } from "@iconify/react";
 
-import { AcmeIcon } from "@/constants/social";
+import { AcmeIcon } from "@/components/icons/social";
 import { Link } from "@nextui-org/link";
 import { Button } from "@nextui-org/button";
 import { Checkbox, Divider, User } from "@nextui-org/react";
@@ -38,7 +38,7 @@ export default function Component() {
       const { type, provider } = options;
       const redirectURL = window.location.origin + "/api/auth/callback";
 
-      if (type === "oauth") {
+      if (type === "oauth" && provider) {
         await supabase.auth.signInWithOAuth({
           provider,
           options: {

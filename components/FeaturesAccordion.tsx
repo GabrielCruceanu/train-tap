@@ -153,9 +153,7 @@ const Item = ({
         ref={accordion}
         className={`transition-all duration-300 ease-in-out text-base-content-secondary overflow-hidden`}
         style={
-          isOpen
-            ? { maxHeight: accordion?.current?.scrollHeight, opacity: 1 }
-            : { maxHeight: 0, opacity: 0 }
+          isOpen ? { maxHeight: 1, opacity: 1 } : { maxHeight: 0, opacity: 0 }
         }
       >
         <div className="pb-5 leading-relaxed">{description}</div>
@@ -192,8 +190,8 @@ const Media = ({ feature }: { feature: Feature }) => {
   } else if (type === "image") {
     return (
       <Image
-        src={path}
-        alt={alt}
+        src={path ? path : ""}
+        alt={alt ? alt : ""}
         className={`${style} object-cover object-center`}
         width={size.width}
         height={size.height}

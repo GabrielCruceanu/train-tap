@@ -18,12 +18,12 @@ export async function POST(req: NextRequest) {
     if (!session) {
       return NextResponse.json(
         { error: "You must be logged in to view billing information." },
-        { status: 401 }
+        { status: 401 },
       );
     } else if (!body.returnUrl) {
       return NextResponse.json(
         { error: "Return URL is required" },
-        { status: 400 }
+        { status: 400 },
       );
     }
 
@@ -38,7 +38,7 @@ export async function POST(req: NextRequest) {
         {
           error: "You don't have a billing account yet. Make a purchase first.",
         },
-        { status: 400 }
+        { status: 400 },
       );
     }
 
@@ -50,7 +50,7 @@ export async function POST(req: NextRequest) {
     return NextResponse.json({
       url: stripePortalUrl,
     });
-  } catch (e) {
+  } catch (e: any) {
     console.error(e);
     return NextResponse.json({ error: e?.message }, { status: 500 });
   }

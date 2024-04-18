@@ -15,7 +15,7 @@ const UserProfile = () => {
       });
 
       console.log(data);
-    } catch (e) {
+    } catch (e: any) {
       console.error(e?.message);
     } finally {
       setIsLoading(false);
