@@ -26,7 +26,7 @@ export async function POST(req: NextRequest) {
   // Create a private supabase client using the secret service_role API key
   const supabase = new SupabaseClient(
     process.env.NEXT_PUBLIC_SUPABASE_URL,
-    process.env.SUPABASE_SERVICE_ROLE_KEY
+    process.env.SUPABASE_SERVICE_ROLE_KEY,
   );
 
   // verify Stripe event is legit
@@ -95,7 +95,7 @@ export async function POST(req: NextRequest) {
         const stripeObject: Stripe.Subscription = event.data
           .object as Stripe.Subscription;
         const subscription = await stripe.subscriptions.retrieve(
-          stripeObject.id
+          stripeObject.id,
         );
 
         await supabase

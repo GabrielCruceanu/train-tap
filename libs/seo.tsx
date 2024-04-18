@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import config from "@/config";
+import { siteConfig } from "../config/site";
 
 // These are all the SEO tags you can add to your pages.
 // It prefills data with default title/description/OG, etc.. and you can cusotmize it for each page.
@@ -19,9 +20,21 @@ export const getSEOTags = ({
 } = {}) => {
   return {
     // up to 50 characters (what does your app do for the user?) > your main should be here
-    title: title || config.appName,
+    title: {
+      default: title || config.appName,
+      template: `%s - ${siteConfig.name}`,
+    },
     // up to 160 characters (how does your app help the user?)
     description: description || config.appDescription,
+    themeColor: [
+      { media: "(prefers-color-scheme: light)", color: "white" },
+      { media: "(prefers-color-scheme: dark)", color: "black" },
+    ],
+    icons: {
+      icon: "/favicon.ico",
+      shortcut: "/favicon-16x16.png",
+      apple: "/apple-touch-icon.png",
+    },
     // some keywords separated by commas. by default it will be your app name
     keywords: keywords || [config.appName],
     applicationName: config.appName,
@@ -29,7 +42,7 @@ export const getSEOTags = ({
     metadataBase: new URL(
       process.env.NODE_ENV === "development"
         ? "http://localhost:3000/"
-        : `https://${config.domainName}/`
+        : `https://${config.domainName}/`,
     ),
 
     openGraph: {
@@ -55,7 +68,7 @@ export const getSEOTags = ({
       // If you add an twitter-image.(jpg|jpeg|png|gif) image to the /app folder, you don't need the code below
       // images: [openGraph?.image || defaults.og.image],
       card: "summary_large_image",
-      creator: "@marc_louvion",
+      creator: "@kaapo.studio",
     },
 
     // If a canonical URL is given, we add it. The metadataBase will turn the relative URL into a fully qualified URL
@@ -83,16 +96,18 @@ export const renderSchemaTags = () => {
         __html: JSON.stringify({
           "@context": "http://schema.org",
           "@type": "SoftwareApplication",
-          name: config.appName,
-          description: config.appDescription,
-          image: `https://${config.domainName}/icon.png`,
-          url: `https://${config.domainName}/`,
+          name: "TrainTap",
+          description:
+            "TrainTap is a cutting-edge application designed to revolutionize the way fitness trainers manage their schedules, client relationships, and workout planning. With a focus on saving time and enhancing efficiency, TrainTap offers streamlined scheduling, effortless client management, customizable workout plans, and direct communication tools all in one platform.",
+          image: "https://traintap.io/icon.png",
+          url: "https://traintap.io/",
           author: {
-            "@type": "Person",
-            name: "Marc Lou",
+            "@type": "Organization",
+            name: "Kaapo Studio",
+            email: "contact@kaapo.studio",
           },
           datePublished: "2023-08-01",
-          applicationCategory: "EducationalApplication",
+          applicationCategory: "HealthApplication",
           aggregateRating: {
             "@type": "AggregateRating",
             ratingValue: "4.8",
@@ -101,7 +116,17 @@ export const renderSchemaTags = () => {
           offers: [
             {
               "@type": "Offer",
-              price: "9.00",
+              price: "19.99",
+              priceCurrency: "USD",
+            },
+            {
+              "@type": "Offer",
+              price: "49.99",
+              priceCurrency: "USD",
+            },
+            {
+              "@type": "Offer",
+              price: "99.99",
               priceCurrency: "USD",
             },
           ],
