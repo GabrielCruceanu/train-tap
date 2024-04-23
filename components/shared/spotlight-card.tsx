@@ -3,7 +3,7 @@
 import { Card, CardBody, CardProps, CardHeader } from "@nextui-org/card";
 
 import React from "react";
-import { Image } from "@nextui-org/react";
+import { Image } from "@nextui-org/image";
 import {
   m,
   useMotionValue,
