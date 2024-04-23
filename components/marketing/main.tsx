@@ -1,6 +1,5 @@
 import { Button } from "@nextui-org/button";
 import Image from "../image";
-import DiscountCard from "../card";
 import { siteConfig } from "../../config/site";
 import { Link } from "@nextui-org/link";
 import { title } from "../primitives";

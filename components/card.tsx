@@ -1,14 +1,13 @@
 "use client";
 
-import { Card, CardBody, CardFooter, type CardProps } from "@nextui-org/react";
-
 import React from "react";
 import { Icon } from "@iconify/react";
 import { Input } from "@nextui-org/input";
 import { Button } from "@nextui-org/button";
 import { Divider } from "@nextui-org/divider";
 import { Link } from "@nextui-org/link";
-import { cn } from "../utils/cn";
+import { cn } from "@/utils/cn";
+import { Card, CardBody, CardFooter, type CardProps } from "@nextui-org/card";
 
 export default function DiscountCard(props: CardProps) {
   const [isOpen, setIsOpen] = React.useState<boolean>(false);
