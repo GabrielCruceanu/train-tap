@@ -6,7 +6,7 @@ import { useMediaQuery } from "usehooks-ts";
 import ScrollingBanner from "./scrolling-banner";
 import UserReview from "./user-review";
 import testimonials from "./testimonials-content";
-import { Spacer } from "@nextui-org/react";
+import { Spacer } from "@nextui-org/spacer";
 
 export type Testimonial = {
   avatar: string;

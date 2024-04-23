@@ -1,9 +1,9 @@
 "use client";
 
-import type { CardProps } from "@nextui-org/react";
+import { Card, CardBody, CardProps, CardHeader } from "@nextui-org/card";
 
 import React from "react";
-import { Card, CardBody, Image, CardHeader } from "@nextui-org/react";
+import { Image } from "@nextui-org/react";
 import {
   m,
   useMotionValue,
@@ -49,7 +49,7 @@ export default function SpotlightCard(props: SpotlightCardProps) {
             background: useMotionTemplate`
             radial-gradient(
               450px circle at ${mouseX}px ${mouseY}px,
-              rgba(186, 229, 1, 0.2),
+              rgba(186, 229, 1, 0.1),
               transparent 80%
             )
           `, // <- Add your own color here

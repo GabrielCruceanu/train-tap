@@ -1,8 +1,8 @@
 "use client";
 
 import React from "react";
-import { Avatar } from "@nextui-org/react";
-import { cn } from "../../../utils/cn";
+import { Avatar } from "@nextui-org/avatar";
+import { cn } from "@/utils/cn";
 
 export type UserReviewProps = React.HTMLAttributes<HTMLDivElement> & {
   avatar: string;

@@ -1,9 +1,7 @@
 "use client";
 
-import type { ScrollShadowProps } from "@nextui-org/react";
-
 import React from "react";
-import { ScrollShadow } from "@nextui-org/react";
+import { ScrollShadow, ScrollShadowProps } from "@nextui-org/scroll-shadow";
 import { cn } from "@/utils/cn";
 
 interface ScrollingBannerProps extends React.HTMLAttributes<HTMLDivElement> {
