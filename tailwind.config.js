@@ -1,3 +1,4 @@
+const {nextui} = require('@nextui-org/theme');
 const { nextui } = require("@nextui-org/theme");
 import plugin from "tailwindcss/plugin";
 
@@ -39,32 +40,21 @@ module.exports = {
     },
   },
   darkMode: "class",
-  plugins: [
-    nextui({
+  plugins: [nextui({
       themes: {
         light: {
           colors: {
-            background: "#F9F9F4", // or DEFAULT
-            foreground: "#1E1E1E", // or 50 to 900 DEFAULT
+            background: #F9F9F4, // or DEFAULT
+            foreground: #1E1E1E, // or 50 to 900 DEFAULT
             primary: {
               //... 50 to 900
-              foreground: "#1E1E1E",
-              DEFAULT: "#C7F401",
-            }, // ... rest of the colors
-          },
-        },
-        dark: {
+              foreground: #1E1E1E,DEFAULT: #C7F401,}, // ... rest of the colors
+          },},dark: {
           colors: {
-            background: "#1E1E1E", // or DEFAULT
-            foreground: "#F9F9F4", // or 50 to 900 DEFAULT
+            background: #1E1E1E, // or DEFAULT
+            foreground: #F9F9F4, // or 50 to 900 DEFAULT
             primary: {
               //... 50 to 900
-              foreground: "#1E1E1E",
-              DEFAULT: "#C7F401",
-            },
-          }, // ... rest of the colors
-        },
-      },
-    }),
-  ],
+              foreground: #1E1E1E,DEFAULT: #C7F401,},}, // ... rest of the colors
+        },},}),nextui()],
 };

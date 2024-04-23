@@ -1,24 +1,20 @@
-import {
-  Button,
-  Tooltip,
-  Input,
-  Image,
-  Card,
-  CardBody,
-  CardFooter,
-  Switch,
-  Spinner,
-  Pagination,
-} from "@nextui-org/react";
 import { MoonFilledIcon, SunFilledIcon } from "@nextui-org/shared-icons";
 import { useTheme } from "next-themes";
 import NextImage from "next/image";
 
 import { FloatingTabs } from "./floating-tabs";
+import { Image } from "@nextui-org/react";
 
 import { useIsMounted } from "@/hooks/use-is-mounted";
 import { useMediaQuery } from "@/hooks/use-media-query";
 import { NextUILogo } from "@/components/nextui-logo";
+import { Switch } from "@nextui-org/switch";
+import { Input } from "@nextui-org/input";
+import { Card, CardBody, CardFooter } from "@nextui-org/card";
+import { Pagination } from "@nextui-org/pagination";
+import { Tooltip } from "@nextui-org/tooltip";
+import { Button } from "@nextui-org/button";
+import { Spinner } from "@nextui-org/spinner";
 
 export const FloatingComponents: React.FC<{}> = () => {
   const { theme, setTheme } = useTheme();

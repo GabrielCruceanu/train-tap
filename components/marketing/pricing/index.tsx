@@ -2,22 +2,17 @@
 
 import React from "react";
 import { Icon } from "@iconify/react";
-import {
-  Card,
-  CardBody,
-  CardFooter,
-  CardHeader,
-  Chip,
-  Divider,
-  Spacer,
-  Tab,
-  Tabs,
-} from "@nextui-org/react";
 
 import { frequencies, tiers } from "./pricing-tiers";
 import { FrequencyEnum } from "./pricing-types";
 import { cn } from "../../../utils/cn";
 import ButtonCheckout from "../../ButtonCheckout";
+import { Spacer } from "@nextui-org/spacer";
+import { Tab, Tabs } from "@nextui-org/tabs";
+import { Chip } from "@nextui-org/chip";
+import { Card, CardBody, CardFooter } from "@nextui-org/card";
+import { CardHeader } from "@nextui-org/card";
+import { Divider } from "@nextui-org/divider";
 
 export default function Pricing() {
   const [selectedFrequency, setSelectedFrequency] = React.useState(

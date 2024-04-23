@@ -1,7 +1,7 @@
 import { getSEOTags } from "@/libs/seo";
 import Cta from "@/components/marketing/cta";
-import { Spacer } from "@nextui-org/react";
-import Faqs from "../../../components/marketing/faqs";
+import { Spacer } from "@nextui-org/spacer";
+import Faqs from "@/components/marketing/faqs";
 
 export const metadata = getSEOTags({
   title: "Support",

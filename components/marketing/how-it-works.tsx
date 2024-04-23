@@ -1,10 +1,5 @@
-import { Button } from "@nextui-org/button";
-import { Link } from "@nextui-org/link";
-import { siteConfig } from "../../config/site";
-import { Image } from "@nextui-org/image";
-import { Spacer } from "@nextui-org/react";
-import { DiscordIcon, GithubIcon, TwitterIcon } from "../icons/social";
-import { sectionWrapper, subtitle, title, titleWrapper } from "../primitives";
+import { Spacer } from "@nextui-org/spacer";
+import { sectionWrapper } from "../primitives";
 import SpotlightCard from "../shared/spotlight-card";
 
 type HowItWorksProps = {};

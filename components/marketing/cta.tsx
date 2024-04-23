@@ -1,7 +1,7 @@
 import { Button } from "@nextui-org/button";
 import { Link } from "@nextui-org/link";
 import { siteConfig } from "../../config/site";
-import { Spacer } from "@nextui-org/react";
+import { Spacer } from "@nextui-org/spacer";
 
 const Cta = () => {
   return (

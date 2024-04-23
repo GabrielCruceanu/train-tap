@@ -1,7 +1,7 @@
 import Problem from "@/components/marketing/problem";
 import { getSEOTags } from "@/libs/seo";
 import Cta from "@/components/marketing/cta";
-import { Spacer } from "@nextui-org/react";
+import { Spacer } from "@nextui-org/spacer";
 
 export const metadata = getSEOTags({
   title: "Problem",

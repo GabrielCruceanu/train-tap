@@ -1,5 +1,5 @@
-import { Spacer } from "@nextui-org/react";
-import { sectionWrapper, subtitle, title, titleWrapper } from "../primitives";
+import { Spacer } from "@nextui-org/spacer";
+import { sectionWrapper } from "../primitives";
 import SpotlightCard from "../shared/spotlight-card";
 
 type ProblemProps = {};

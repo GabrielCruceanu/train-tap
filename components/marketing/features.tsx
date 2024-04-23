@@ -1,8 +1,5 @@
-import { Button } from "@nextui-org/button";
-import { Spacer } from "@nextui-org/react";
-import Link from "next/link";
-import { siteConfig } from "../../config/site";
-import { sectionWrapper, titleWrapper, title, subtitle } from "../primitives";
+import { Spacer } from "@nextui-org/spacer";
+import { sectionWrapper } from "../primitives";
 import SpotlightCard from "../shared/spotlight-card";
 
 export const featuresCards = [

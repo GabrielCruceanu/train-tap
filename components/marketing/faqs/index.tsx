@@ -1,13 +1,14 @@
 "use client";
 
 import React from "react";
-import { Accordion, AccordionItem, Spacer } from "@nextui-org/react";
 import { Icon } from "@iconify/react";
 import { Button } from "@nextui-org/button";
 
 import faqs from "./faqs-content";
 import { Link } from "@nextui-org/link";
 import { sectionWrapper } from "../../primitives";
+import { Spacer } from "@nextui-org/spacer";
+import { Accordion, AccordionItem } from "@nextui-org/accordion";
 
 export default function Faqs() {
   return (

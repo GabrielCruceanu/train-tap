@@ -1,6 +1,6 @@
 import { getSEOTags } from "@/libs/seo";
 import Cta from "@/components/marketing/cta";
-import { Spacer } from "@nextui-org/react";
+import { Spacer } from "@nextui-org/spacer";
 import Testimonials from "@/components/marketing/testimonials";
 
 export const metadata = getSEOTags({
