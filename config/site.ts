@@ -6,27 +6,29 @@ export const siteConfig = {
     "Elevate Your Training Business With TrainTap! Streamline scheduling, enhance client engagement, and focus on what you do best—transforming lives through fitness.",
   navItems: [
     {
-      label: "Home",
-      href: "/",
+      label: "Problem",
+      href: "/problem",
     },
     {
-      label: "Docs",
-      href: "/docs",
+      label: "Features",
+      href: "/features",
     },
     {
       label: "Pricing",
       href: "/pricing",
     },
     {
-      label: "Blog",
-      href: "/blog",
+      label: "Testimonials",
+      href: "/testimonials",
     },
     {
-      label: "About",
-      href: "/about",
+      label: "Support",
+      href: "/support",
     },
   ],
-  navMenuItems: [
+  navMenuItems:
+
+  [
     {
       label: "Profile",
       href: "/profile",
@@ -65,6 +67,7 @@ export const siteConfig = {
     twitter: "https://twitter.com/getnextui",
     docs: "https://nextui.org",
     discord: "https://discord.gg/9b6yyZKmH4",
-    sponsor: "https://patreon.com/jrgarciadev",
+    auth: "/signin",
+    pricing: "/pricing",
   },
 };

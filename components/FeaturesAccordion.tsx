@@ -151,12 +151,12 @@ const Item = ({
 
       <div
         ref={accordion}
-        className={`transition-all duration-300 ease-in-out text-base-content-secondary overflow-hidden`}
+        className={`transition-all duration-300 ease-in-out text-base-content-primary overflow-hidden`}
         style={
           isOpen ? { maxHeight: 1, opacity: 1 } : { maxHeight: 0, opacity: 0 }
         }
       >
-        <div className="pb-5 leading-relaxed">{description}</div>
+        <div className="pb-5 leading-relaxed text-white/80">{description}</div>
       </div>
     </li>
   );

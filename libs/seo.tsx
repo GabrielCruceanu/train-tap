@@ -44,7 +44,13 @@ export const getSEOTags = ({
         ? "http://localhost:3000/"
         : `https://${config.domainName}/`,
     ),
-
+    authors: [
+      {
+        name: "Kaapo Studio",
+        url: "https://kaapo.studio",
+      },
+    ],
+    creator: "kaapo.studio",
     openGraph: {
       title: openGraph?.title || config.appName,
       description: openGraph?.description || config.appDescription,

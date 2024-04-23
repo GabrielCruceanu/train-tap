@@ -71,7 +71,7 @@ const config = {
         // A friendly description of the plan, displayed on the pricing page. Tip: explain why this plan and not others
         description: "Perfect for established trainers looking for efficiency",
         // The price you want to display, the one user will be charged on Stripe.
-        price: 49.99,
+        price: 49,
         // If you have an anchor price (i.e. $29) that you want to display crossed out, put it here. Otherwise, leave it empty
         priceAnchor: undefined,
         features: [
@@ -117,12 +117,12 @@ const config = {
         description:
           "The ultimate solution for trainers aiming to scale their business",
         // The price you want to display, the one user will be charged on Stripe.
-        price: 99.99,
+        price: 99,
         // If you have an anchor price (i.e. $29) that you want to display crossed out, put it here. Otherwise, leave it empty
         priceAnchor: undefined,
         features: [
           {
-            name: "Includes everything in the Pro Plan, plus",
+            name: "Includes everything in the Pro Plan",
           },
           { name: "Unlimited client management" },
           { name: "Priority support" },
@@ -164,11 +164,11 @@ const config = {
     // subdomain to use when sending emails, if you don't have a subdomain, just remove it. Highly recommended to have one (i.e. mg.yourdomain.com or mail.yourdomain.com)
     subdomain: "mg.eu",
     // REQUIRED — Email 'From' field to be used when sending magic login links
-    fromNoReply: `TrianTap <noreply@mg.eu.traintap.io>`,
+    fromNoReply: `TrianTap <noreply@contact@traintap.io>`,
     // REQUIRED — Email 'From' field to be used when sending other emails, like abandoned carts, updates etc..
-    fromAdmin: `Gabriel at TrainTap <gabriel@mg.eu.traintap.io>`,
+    fromAdmin: `TrainTap <contact@contact@traintap.io>`,
     // Email shown to customer if need support. Leave empty if not needed => if empty, set up Crisp above, otherwise you won't be able to offer customer support."
-    supportEmail: "gabriel@mg.eu.traintap.io",
+    supportEmail: "contact@traintap.io",
     // When someone replies to supportEmail sent by the app, forward it to the email below (otherwise it's lost). If you set supportEmail to empty, this will be ignored.
     forwardRepliesTo: "kaapo.studio@gmail.com",
   },
