@@ -3,7 +3,7 @@ import { useTheme } from "next-themes";
 import NextImage from "next/image";
 
 import { FloatingTabs } from "./floating-tabs";
-import { Image } from "@nextui-org/react";
+import { Image } from "@nextui-org/image";
 
 import { useIsMounted } from "@/hooks/use-is-mounted";
 import { useMediaQuery } from "@/hooks/use-media-query";
