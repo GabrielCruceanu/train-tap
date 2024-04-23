@@ -2,6 +2,8 @@ import Link from "next/link";
 import Image from "next/image";
 import config from "@/config";
 import logo from "@/app/icon.png";
+import { Logo } from "./icons";
+import { siteConfig } from "../config/site";
 
 // Add the Footer to the bottom of your landing page and more.
 // The support link is connected to the config.js file. If there's no config.mailgun.supportEmail, the link won't be displayed.
@@ -13,18 +15,19 @@ const Footer = () => {
         <div className=" flex lg:items-start md:flex-row md:flex-nowrap flex-wrap flex-col">
           <div className="w-64 flex-shrink-0 md:mx-0 mx-auto text-center md:text-left">
             <Link
-              href="/#"
+              href="/"
               aria-current="page"
               className="flex gap-2 justify-center md:justify-start items-center"
             >
-              <Image
+              {/* <Image
                 src={logo}
                 alt={`${config.appName} logo`}
                 priority={true}
                 className="w-6 h-6"
                 width={24}
                 height={24}
-              />
+              /> */}
+              <Logo />
               <strong className="font-extrabold tracking-tight text-base md:text-lg">
                 {config.appName}
               </strong>
@@ -44,25 +47,15 @@ const Footer = () => {
               </div>
 
               <div className="flex flex-col justify-center items-center md:items-start gap-2 mb-10 text-sm">
-                {config.mailgun.supportEmail && (
-                  <a
-                    href={`mailto:${config.mailgun.supportEmail}`}
-                    target="_blank"
+                {siteConfig.navItems.map((item) => (
+                  <Link
+                    href={item.href}
                     className="link link-hover"
-                    aria-label="Contact Support"
+                    key={item.label}
                   >
-                    Support
-                  </a>
-                )}
-                <Link href="/#pricing" className="link link-hover">
-                  Pricing
-                </Link>
-                <Link href="/blog" className="link link-hover">
-                  Blog
-                </Link>
-                <a href="/#" target="_blank" className="link link-hover">
-                  Affiliates
-                </a>
+                    {item.label}
+                  </Link>
+                ))}
               </div>
             </div>
 
@@ -72,7 +65,7 @@ const Footer = () => {
               </div>
 
               <div className="flex flex-col justify-center items-center md:items-start gap-2 mb-10 text-sm">
-                <Link href="/tos" className="link link-hover">
+                <Link href="/terms-and-conditions" className="link link-hover">
                   Terms of services
                 </Link>
                 <Link href="/privacy-policy" className="link link-hover">

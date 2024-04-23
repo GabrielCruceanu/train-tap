@@ -5,7 +5,21 @@ import clsx from "clsx";
 import config from "@/config";
 import PlausibleProvider from "next-plausible";
 import { getSEOTags } from "@/libs/seo";
-import ClientLayout from "@/components/layouts/LayoutClient";
+import ClientLayout from "@/components/layouts/layout-client";
+import { Inter, Inter_Tight } from "next/font/google";
+const interTight = Inter_Tight({
+  weight: ["500"],
+  subsets: ["latin"],
+  display: "block",
+  variable: "--font-inter-tight",
+});
+
+const inter = Inter({
+  weight: ["400", "500", "600", "700", "800"],
+  subsets: ["latin"],
+  display: "block",
+  variable: "--font-inter",
+});
 
 // This adds default SEO tags to all pages in our app.
 // You can override them in each page passing params to getSOTags() function.
@@ -25,8 +39,8 @@ export default function RootLayout({
       )}
       <body
         className={clsx(
-          "min-h-screen bg-background font-sans antialiased",
-          fontSans.variable,
+          "min-h-screen bg-background lime-dark font-sans antialiased text-paragraph font-medium md:text-body",
+          inter.variable,
         )}
       >
         {/* ClientLayout contains all the client wrappers (Crisp chat support, toast messages, tooltips, etc.) */}

@@ -20,6 +20,8 @@ const nextConfig = {
       "pbs.twimg.com",
       "images.unsplash.com",
       "logos-world.net",
+      "flowbite.s3.amazonaws.com",
+      "pravatar.cc",
     ],
   },
 };
