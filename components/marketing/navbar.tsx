@@ -9,31 +9,40 @@ import {
   NavbarMenuItem,
 } from "@nextui-org/navbar";
 import { Button } from "@nextui-org/button";
-import { Kbd } from "@nextui-org/kbd";
 import { Link } from "@nextui-org/link";
-import { Input } from "@nextui-org/input";
-
-import { link as linkStyles } from "@nextui-org/theme";
-
 import { siteConfig } from "@/config/site";
 import NextLink from "next/link";
-import clsx from "clsx";
 
-import { ThemeSwitch } from "@/components/theme-switch";
-import {
-  TwitterIcon,
-  GithubIcon,
-  DiscordIcon,
-  HeartFilledIcon,
-  SearchIcon,
-} from "@/components/icons";
+import { ThemeSwitch } from "@/components/shared/theme-switch";
 
-import { Logo } from "@/components/icons";
+import { Logo } from "@/components/ui/icons";
 import config from "../../config";
 import { usePathname } from "next/navigation";
 
+type NavItem = {
+  label: string;
+  href: string;
+};
+
+type NavItems = NavItem[];
+
 export const Navbar = () => {
   const pathname = usePathname();
+
+  const renderNavItems = (navItems: NavItems) => {
+    return navItems.map((item, index) => (
+      <NavbarMenuItem key={`${item}-${index}`}>
+        <Link
+          color={pathname === item.href ? "primary" : "foreground"}
+          href={item.href}
+          size="lg"
+        >
+          {item.label}
+        </Link>
+      </NavbarMenuItem>
+    ));
+  };
+
   return (
     <NextUINavbar maxWidth="2xl" position="sticky" className="z-[100001]">
       <NavbarContent className="basis-1/5 sm:basis-full" justify="start">
@@ -46,20 +55,7 @@ export const Navbar = () => {
       </NavbarContent>
       <NavbarContent className="hidden lg:flex">
         <ul className="lg:flex gap-4 justify-start mx-auto">
-          {siteConfig.navItems.map((item) => (
-            <NavbarItem key={item.href}>
-              <NextLink
-                className={clsx(
-                  linkStyles({ color: "foreground" }),
-                  pathname === item.href && "text-primary font-medium",
-                )}
-                color="foreground"
-                href={item.href}
-              >
-                {item.label}
-              </NextLink>
-            </NavbarItem>
-          ))}
+          {renderNavItems(siteConfig.navItems)}
         </ul>
       </NavbarContent>
       <NavbarContent
@@ -74,32 +70,18 @@ export const Navbar = () => {
             href={siteConfig.links.auth}
             radius="sm"
           >
-            Sing Up
+            Sign Up
           </Button>
         </NavbarItem>
       </NavbarContent>
 
       <NavbarContent className="lg:hidden basis-1 pl-4" justify="end">
-        {/* <Link isExternal href={siteConfig.links.github} aria-label="Github">
-          <GithubIcon className="text-default-500" />
-        </Link>
-        <ThemeSwitch /> */}
         <NavbarMenuToggle />
       </NavbarContent>
 
       <NavbarMenu>
         <div className="mx-4 mt-2 flex flex-col gap-2">
-          {siteConfig.navItems.map((item, index) => (
-            <NavbarMenuItem key={`${item}-${index}`}>
-              <Link
-                color={pathname === item.href ? "primary" : "foreground"}
-                href={item.href}
-                size="lg"
-              >
-                {item.label}
-              </Link>
-            </NavbarMenuItem>
-          ))}
+          {renderNavItems(siteConfig.navItems)}
           <NavbarMenuItem className="mt-5">
             <Button
               as={Link}
@@ -107,7 +89,7 @@ export const Navbar = () => {
               href={siteConfig.links.auth}
               radius="sm"
             >
-              Sing Up
+              Sign Up
             </Button>
           </NavbarMenuItem>
         </div>

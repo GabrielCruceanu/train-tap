@@ -1,40 +1,44 @@
 import { Spacer } from "@nextui-org/spacer";
 import { sectionWrapper } from "../primitives";
-import SpotlightCard from "../shared/spotlight-card";
+import { Content } from "@/types/maketing/content";
+import RenderSpotlightCards from "../shared/render-spotlight-card";
 
-export const featuresCards = [
+/**
+ * Array of objects representing the content for the "Features" section.
+ */
+export const CONTENT: Content = [
   {
     title: "Streamlined Scheduling",
-    image:
-      "https://nextuipro.nyc3.cdn.digitaloceanspaces.com/components-images/calendar.png",
+    image: "/images/features/scheduling.jpg",
     description:
       "Say goodbye to manual scheduling. Our intuitive calendar view lets your clients book their own sessions based on your real-time availability.",
   },
 
   {
     title: "Effortless Client Management",
-    image:
-      "https://nextuipro.nyc3.cdn.digitaloceanspaces.com/components-images/calendar.png",
+    image: "/images/features/client-management.jpg",
     description:
       "Manage all client information, progress, and session notes in one place. Tailor workouts and track progress with ease.",
   },
 
   {
     title: "Customizable Workout Plans",
-    image:
-      "https://nextuipro.nyc3.cdn.digitaloceanspaces.com/components-images/calendar.png",
+    image: "/images/features/workout.jpg",
     description:
       "Access a vast library of workouts or create your own. Design personalized training programs that align with your clients' goals.",
   },
 
   {
     title: "Direct Communication Tools",
-    image:
-      "https://nextuipro.nyc3.cdn.digitaloceanspaces.com/components-images/calendar.png",
+    image: "/images/features/comunication.jpg",
     description:
       "Stay connected with your clients through in-app messaging. Provide timely feedback and keep them motivated.",
   },
 ];
+
+/**
+ * Represents the Features component.
+ */
 const Features = () => {
   return (
     <section
@@ -54,14 +58,7 @@ const Features = () => {
           </h2>
         </div>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
-          {featuresCards.map((item) => (
-            <SpotlightCard
-              key={item.title}
-              image={item.image}
-              title={item.title}
-              description={item.description}
-            />
-          ))}
+          <RenderSpotlightCards content={CONTENT} />
         </div>
       </div>
     </section>
