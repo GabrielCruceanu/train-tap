@@ -58,7 +58,7 @@ const Features = () => {
           </h2>
         </div>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
-          {<RenderSpotlightCards content={CONTENT} />}
+          <RenderSpotlightCards content={CONTENT} />
         </div>
       </div>
     </section>
