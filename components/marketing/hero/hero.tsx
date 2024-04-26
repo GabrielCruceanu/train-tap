@@ -7,7 +7,7 @@ import dynamic from "next/dynamic";
 import { FloatingComponents } from "./floating-components";
 
 import { title, subtitle } from "@/components/primitives";
-import { GithubIcon } from "@/components/icons";
+import { GithubIcon } from "@/components/ui/icons";
 import { trackEvent } from "@/utils/va";
 import { Chip } from "@nextui-org/chip";
 import { Button } from "@nextui-org/button";

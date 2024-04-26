@@ -7,7 +7,7 @@ import { Image } from "@nextui-org/image";
 
 import { useIsMounted } from "@/hooks/use-is-mounted";
 import { useMediaQuery } from "@/hooks/use-media-query";
-import { NextUILogo } from "@/components/nextui-logo";
+import { NextUILogo } from "@/components/shared/nextui-logo";
 import { Switch } from "@nextui-org/switch";
 import { Input } from "@nextui-org/input";
 import { Card, CardBody, CardFooter } from "@nextui-org/card";

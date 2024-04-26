@@ -6,9 +6,10 @@ import { Button } from "@nextui-org/button";
 
 import faqs from "./faqs-content";
 import { Link } from "@nextui-org/link";
-import { sectionWrapper } from "../../primitives";
+import { sectionWrapper } from "@/components/primitives";
 import { Spacer } from "@nextui-org/spacer";
 import { Accordion, AccordionItem } from "@nextui-org/accordion";
+import { trackEvent } from "@/utils/va";
 
 export default function Faqs() {
   return (
@@ -29,7 +30,19 @@ export default function Faqs() {
           </h2>
           <Spacer y={4} />
           <div>
-            <Button as={Link} color="primary" href="mailto:contact@traintap.io">
+            <Button
+              as={Link}
+              color="primary"
+              href="mailto:contact@traintap.io"
+              onPress={() => {
+                trackEvent("Support - Faq", {
+                  name: "Faq",
+                  action: "click",
+                  category: "support",
+                  data: "contact",
+                });
+              }}
+            >
               Contact Us
             </Button>
           </div>

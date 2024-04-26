@@ -1,7 +1,8 @@
 import { Button } from "@nextui-org/button";
 import { Link } from "@nextui-org/link";
-import { siteConfig } from "../../config/site";
+import { siteConfig } from "@/config/site";
 import { Spacer } from "@nextui-org/spacer";
+import { trackEvent } from "@/utils/va";
 
 const Cta = () => {
   return (
@@ -22,6 +23,14 @@ const Cta = () => {
           radius="sm"
           as={Link}
           href={siteConfig.links.pricing}
+          onPress={() => {
+            trackEvent("Cta - Start for free", {
+              name: "Handel cta",
+              action: "click",
+              category: "cta",
+              data: "Cta",
+            });
+          }}
         >
           Start for free
         </Button>

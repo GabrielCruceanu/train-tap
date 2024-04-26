@@ -25,6 +25,9 @@ import config from "@/config";
 
 // Please write a simple Terms & Services for my site. Add the current date. Do not add or explain your reasoning. Answer:
 
+/**
+ * Metadata for the Terms and Conditions page.
+ */
 export const metadata = getSEOTags({
   title: `Terms and Conditions | ${config.appName}`,
   canonicalUrlRelative: "/terms-and-conditions",

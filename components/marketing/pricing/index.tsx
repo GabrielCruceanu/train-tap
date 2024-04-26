@@ -6,13 +6,14 @@ import { Icon } from "@iconify/react";
 import { frequencies, tiers } from "./pricing-tiers";
 import { FrequencyEnum } from "./pricing-types";
 import { cn } from "../../../utils/cn";
-import ButtonCheckout from "../../ButtonCheckout";
+import ButtonCheckout from "./button-checkout";
 import { Spacer } from "@nextui-org/spacer";
 import { Tab, Tabs } from "@nextui-org/tabs";
 import { Chip } from "@nextui-org/chip";
 import { Card, CardBody, CardFooter } from "@nextui-org/card";
 import { CardHeader } from "@nextui-org/card";
 import { Divider } from "@nextui-org/divider";
+import { trackEvent } from "../../../utils/va";
 
 export default function Pricing() {
   const [selectedFrequency, setSelectedFrequency] = React.useState(
@@ -59,7 +60,18 @@ export default function Pricing() {
         radius="md"
         onSelectionChange={onFrequencyChange}
       >
-        <Tab key={FrequencyEnum.Mountly} title="Pay Mountly" />
+        <Tab
+          key={FrequencyEnum.Mountly}
+          title="Pay Mountly"
+          onClick={() => {
+            trackEvent("Pricing - Tabs", {
+              name: "Pay Mountly",
+              action: "click",
+              category: "pricing",
+              data: "Pay Mountly",
+            });
+          }}
+        />
         <Tab
           key={FrequencyEnum.Yearly}
           aria-label="Pay Yearly"
@@ -72,6 +84,14 @@ export default function Pricing() {
               </Chip>
             </div>
           }
+          onClick={() => {
+            trackEvent("Pricing - Tabs", {
+              name: "Pay Yearly",
+              action: "click",
+              category: "pricing",
+              data: "Pay Yearly",
+            });
+          }}
         />
       </Tabs>
       <Spacer y={12} />

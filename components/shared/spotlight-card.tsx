@@ -60,7 +60,7 @@ export default function SpotlightCard(props: SpotlightCardProps) {
         <Image
           removeWrapper
           alt={props.title}
-          className="h-full object-cover"
+          className="w-full object-cover"
           src={props.image}
           style={{
             // @ts-ignore

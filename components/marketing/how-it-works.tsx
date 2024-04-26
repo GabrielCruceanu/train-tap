@@ -1,32 +1,34 @@
 import { Spacer } from "@nextui-org/spacer";
 import { sectionWrapper } from "../primitives";
-import SpotlightCard from "../shared/spotlight-card";
+import { Content } from "@/types/maketing/content";
+import RenderSpotlightCards from "../shared/render-spotlight-card";
 
-type HowItWorksProps = {};
-export const joyOfTrainingCard = [
+/**
+ * Array of objects representing the content for the "How It Works" section.
+ */
+export const CONTENT: Content = [
   {
     title: "Sign Up",
-    image:
-      "https://nextuipro.nyc3.cdn.digitaloceanspaces.com/components-images/calendar.png",
+    image: "/images/how-it-works/sign-up.jpg",
     description: "Join the TrainTap community in just a few clicks.",
   },
-
   {
     title: "Set Your Availability",
-    image:
-      "https://nextuipro.nyc3.cdn.digitaloceanspaces.com/components-images/calendar.png",
+    image: "/images/how-it-works/set-availability.jpg",
     description: "Easily input your schedule and set your available slots.",
   },
-
   {
     title: "Connect With Clients",
-    image:
-      "https://nextuipro.nyc3.cdn.digitaloceanspaces.com/components-images/calendar.png",
+    image: "/images/how-it-works/connect-with-clients.jpg",
     description:
       "Let your clients book their next session online, hassle-free.",
   },
 ];
-const HowItWorks = ({}: HowItWorksProps) => {
+
+/**
+ * Component that displays the "How It Works" section.
+ */
+const HowItWorks = () => {
   return (
     <>
       <section
@@ -47,18 +49,12 @@ const HowItWorks = ({}: HowItWorksProps) => {
             </h2>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-            {joyOfTrainingCard.map((item) => (
-              <SpotlightCard
-                key={item.title}
-                image={item.image}
-                title={item.title}
-                description={item.description}
-              />
-            ))}
+            {<RenderSpotlightCards content={CONTENT} />}
           </div>
         </div>
       </section>
     </>
   );
 };
+
 export default HowItWorks;

@@ -1,8 +1,14 @@
+"use client";
+/**
+ * Renders the main section of the marketing component.
+ */
 import { Button } from "@nextui-org/button";
-import Image from "../image";
+import Image from "../ui/image";
 import { siteConfig } from "../../config/site";
 import { Link } from "@nextui-org/link";
 import { title } from "../primitives";
+import { ArrowRightIcon } from "@nextui-org/shared-icons";
+import { trackEvent } from "../../utils/va";
 
 type MainProps = {};
 
@@ -39,12 +45,28 @@ const Main = ({}: MainProps) => (
 
           <div className="flex items-center justify-center gap-4 mt-8 lg:justify-start">
             <Button
-              color="primary"
-              radius="sm"
               as={Link}
+              className="w-full md:w-auto"
+              color="primary"
+              endContent={
+                <ArrowRightIcon
+                  className="group-data-[hover=true]:translate-x-0.5 outline-none transition-transform"
+                  strokeWidth={2}
+                />
+              }
               href={siteConfig.links.auth}
+              radius="sm"
+              size="lg"
+              onPress={() => {
+                trackEvent("Hero - Get Started", {
+                  name: "Get Started",
+                  action: "click",
+                  category: "landing-page",
+                  data: siteConfig.links.auth,
+                });
+              }}
             >
-              Start for free
+              Get Started
             </Button>
           </div>
 
