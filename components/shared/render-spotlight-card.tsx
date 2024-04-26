@@ -7,14 +7,18 @@ import SpotlightCard from "./spotlight-card";
  * @returns The rendered spotlight cards.
  */
 const RenderSpotlightCards = ({ content }: { content: Content }) => {
-  return content.map(({ title, image, description }) => (
-    <SpotlightCard
-      key={title}
-      image={image}
-      title={title}
-      description={description}
-    />
-  ));
+  return (
+    <>
+      {content.map(({ title, image, description }) => (
+        <SpotlightCard
+          key={title}
+          image={image}
+          title={title}
+          description={description}
+        />
+      ))}
+    </>
+  );
 };
 
 export default RenderSpotlightCards;
