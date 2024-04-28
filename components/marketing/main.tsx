@@ -54,7 +54,7 @@ const Main = ({}: MainProps) => (
                   strokeWidth={2}
                 />
               }
-              href={siteConfig.links.auth}
+              href={siteConfig.links.auth.signup.href}
               radius="sm"
               size="lg"
               onPress={() => {
@@ -62,7 +62,7 @@ const Main = ({}: MainProps) => (
                   name: "Get Started",
                   action: "click",
                   category: "landing-page",
-                  data: siteConfig.links.auth,
+                  data: siteConfig.links.auth.signup.href,
                 });
               }}
             >

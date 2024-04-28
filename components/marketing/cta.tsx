@@ -23,7 +23,7 @@ const Cta = () => {
           color="primary"
           radius="sm"
           as={Link}
-          href={siteConfig.links.pricing}
+          href={siteConfig.links.static.pricing.href}
           onPress={() => {
             trackEvent("Cta - Start for free", {
               name: "Handel cta",

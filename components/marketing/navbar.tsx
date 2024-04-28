@@ -86,10 +86,10 @@ export const Navbar = () => {
             <Button
               as={Link}
               color="primary"
-              href={siteConfig.links.auth}
+              href={siteConfig.links.auth.login.href}
               radius="sm"
             >
-              Sign Up
+              {siteConfig.links.auth.login.label}
             </Button>
           </NavbarMenuItem>
         </div>
