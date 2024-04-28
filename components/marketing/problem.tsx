@@ -1,7 +1,7 @@
 import { Spacer } from "@nextui-org/spacer";
 import { sectionWrapper } from "../primitives";
 import RenderSpotlightCards from "../shared/render-spotlight-card";
-import { Content } from "../../types/maketing/content";
+import { Content } from "../../ts/maketing/content";
 
 /**
  * Array containing information about different problems faced by personal trainers.

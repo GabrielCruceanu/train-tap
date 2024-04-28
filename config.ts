@@ -1,4 +1,4 @@
-import { ConfigProps } from "./types/config";
+import { ConfigProps } from "./ts/config";
 
 const config = {
   // REQUIRED
@@ -181,7 +181,7 @@ const config = {
   },
   auth: {
     // REQUIRED — the path to log in users. It's use to protect private routes (like /dashboard). It's used in apiClient (/libs/api.js) upon 401 errors from our API
-    loginUrl: "/signin",
+    loginUrl: "/login",
     // REQUIRED — the path you want to redirect users after successfull login (i.e. /dashboard, /private). This is normally a private page for users to manage their accounts. It's used in apiClient (/libs/api.js) upon 401 errors from our API & in ButtonSignin.js
     callbackUrl: "/dashboard",
   },

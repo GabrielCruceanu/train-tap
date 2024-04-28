@@ -6,6 +6,7 @@ import { useRouter } from "next/navigation";
 import { ThemeProvider as NextThemesProvider } from "next-themes";
 import { ThemeProviderProps } from "next-themes/dist/types";
 import { Analytics } from "@vercel/analytics/react";
+import { Toaster } from "@/components/ui/toaster";
 
 export interface ProvidersProps {
   children: React.ReactNode;
@@ -28,6 +29,7 @@ export function Providers({ children, themeProps }: ProvidersProps) {
       <NextThemesProvider {...themeProps}>
         {children}
         <Analytics />
+        <Toaster />
       </NextThemesProvider>
     </NextUIProvider>
   );
