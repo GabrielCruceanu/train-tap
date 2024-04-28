@@ -4,15 +4,8 @@ import { Providers } from "./providers";
 import clsx from "clsx";
 import config from "@/config";
 import PlausibleProvider from "next-plausible";
-import { getSEOTags } from "@/libs/seo";
-import ClientLayout from "@/components/layouts/layout-client";
-import { Inter, Inter_Tight } from "next/font/google";
-const interTight = Inter_Tight({
-  weight: ["500"],
-  subsets: ["latin"],
-  display: "block",
-  variable: "--font-inter-tight",
-});
+import ClientLayout from "@/components/layouts/client-layout";
+import { Inter } from "next/font/google";
 
 const inter = Inter({
   weight: ["400", "500", "600", "700", "800"],
@@ -20,10 +13,6 @@ const inter = Inter({
   display: "block",
   variable: "--font-inter",
 });
-
-// This adds default SEO tags to all pages in our app.
-// You can override them in each page passing params to getSOTags() function.
-export const metadata = getSEOTags();
 
 export default function RootLayout({
   children,

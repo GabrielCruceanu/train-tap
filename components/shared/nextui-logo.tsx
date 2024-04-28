@@ -1,7 +1,7 @@
 import React from "react";
 import { clsx } from "@nextui-org/shared-utils";
 
-import { IconSvgProps } from "@/types";
+import { IconSvgProps } from "@/ts";
 import { dataAttr } from "@/utils";
 export interface LogoProps extends IconSvgProps {
   auto?: boolean;
@@ -21,7 +21,7 @@ export const SmallLogo: React.FC<LogoProps> = ({
   <svg
     className={clsx(
       "data-[auto=true]:sm:hidden block text-foreground",
-      className,
+      className
     )}
     data-auto={dataAttr(auto)}
     fill="currentColor"
@@ -42,7 +42,7 @@ export const LargeLogo: React.FC<LogoProps> = ({
   <svg
     className={clsx(
       "data-[auto=true]:hidden data-[auto=true]:sm:block block text-foreground",
-      className,
+      className
     )}
     data-auto={dataAttr(auto)}
     fill="currentColor"

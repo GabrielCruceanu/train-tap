@@ -26,9 +26,7 @@ export const siteConfig = {
       href: "/support",
     },
   ],
-  navMenuItems:
-
-  [
+  navMenuItems: [
     {
       label: "Profile",
       href: "/profile",
@@ -38,8 +36,8 @@ export const siteConfig = {
       href: "/dashboard",
     },
     {
-      label: "Projects",
-      href: "/projects",
+      label: "Workouts",
+      href: "/workouts",
     },
     {
       label: "Team",
@@ -63,11 +61,108 @@ export const siteConfig = {
     },
   ],
   links: {
-    github: "https://github.com/nextui-org/nextui",
-    twitter: "https://twitter.com/getnextui",
-    docs: "https://nextui.org",
-    discord: "https://discord.gg/9b6yyZKmH4",
-    auth: "/signin",
-    pricing: "/pricing",
+    social: {
+      twitter: {
+        label: "Twitter",
+        href: "https://twitter.com/",
+      },
+      facebook: {
+        label: "Facebook",
+        href: "https://facebook.com/",
+      },
+      instagram: {
+        label: "Instagram",
+        href: "https://instagram.com/",
+      },
+    },
+    static: {
+      home: {
+        label: "Home",
+        href: "/",
+      },
+      problem: {
+        label: "Problem",
+        href: "/problem",
+      },
+      features: {
+        label: "Features",
+        href: "/features",
+      },
+      pricing: {
+        label: "Pricing",
+        href: "/pricing",
+      },
+      testimonials: {
+        label: "Testimonials",
+        href: "/testimonials",
+      },
+      support: {
+        label: "Support",
+        href: "/support",
+      },
+    },
+    auth: {
+      login: {
+        label: "Login",
+        href: "/login",
+      },
+      signup: {
+        label: "Sign Up",
+        href: "/signup",
+      },
+      forgotPassword: {
+        label: "Forgot password",
+        href: "/forgot-password",
+      },
+      resetPassword: {
+        label: "Reset password",
+        href: "/reset-password",
+      },
+    },
+    application: {
+      dashboard: {
+        label: "Dashboard",
+        href: "/dashboard",
+      },
+      calendar: {
+        label: "Calendar",
+        href: "/calendar",
+      },
+      workouts: {
+        label: "Workouts",
+        href: "/workouts",
+      },
+      profile: {
+        label: "Profile",
+        href: "/profile",
+      },
+      team: {
+        label: "Team",
+        href: "/team",
+      },
+      settings: {
+        label: "Settings",
+        href: "/settings",
+      },
+      helpFeedback: {
+        label: "Help & Feedback",
+        href: "/help-feedback",
+      },
+      logout: {
+        label: "Logout",
+        href: "/logout",
+      },
+    },
+
+    legal: {
+      tos: {
+        label: "Terms of Service",
+        href: "/terms-of-service",
+      },
+      privacyPolicy: {
+        label: "Privacy Policy",
+        href: "/privacy-policy",
+      },
+    },
   },
 };

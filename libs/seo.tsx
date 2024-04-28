@@ -20,16 +20,10 @@ export const getSEOTags = ({
 } = {}) => {
   return {
     // up to 50 characters (what does your app do for the user?) > your main should be here
-    title: {
-      default: title || config.appName,
-      template: `%s - ${siteConfig.name}`,
-    },
+    title: title || config.appName,
+    template: `%s - ${siteConfig.name}`,
     // up to 160 characters (how does your app help the user?)
     description: description || config.appDescription,
-    themeColor: [
-      { media: "(prefers-color-scheme: light)", color: "white" },
-      { media: "(prefers-color-scheme: dark)", color: "black" },
-    ],
     icons: {
       icon: "/favicon.ico",
       shortcut: "/favicon-16x16.png",
@@ -42,7 +36,7 @@ export const getSEOTags = ({
     metadataBase: new URL(
       process.env.NODE_ENV === "development"
         ? "http://localhost:3000/"
-        : `https://${config.domainName}/`,
+        : `https://${config.domainName}/`
     ),
     authors: [
       {

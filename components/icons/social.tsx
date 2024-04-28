@@ -1,5 +1,5 @@
 import React from "react";
-import { IconSvgProps } from "@/types";
+import { IconSvgProps } from "@/ts";
 
 const OpenCollectiveIcon: React.FC<IconSvgProps> = ({
   size = 24,
