@@ -42,7 +42,7 @@ export const metadata: Metadata = {
  * @param children - The children components.
  * @returns The rendered layout.
  */
-export default function RootLayout({
+export default function MarketingRootLayout({
   children,
 }: {
   children: React.ReactNode;

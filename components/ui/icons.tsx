@@ -1,6 +1,10 @@
 import * as React from "react";
 import { IconSvgProps } from "@/ts";
 
+import type { IconProps } from "@iconify/react";
+
+import { Icon as BaseIcon } from "@iconify/react";
+
 export const Logo: React.FC<IconSvgProps> = ({
   size = 36,
   width,
@@ -211,4 +215,8 @@ export const NextUILogo: React.FC<IconSvgProps> = (props) => {
       />
     </svg>
   );
+};
+
+export const Icon = (props: IconProps) => {
+  return <BaseIcon {...props} />;
 };

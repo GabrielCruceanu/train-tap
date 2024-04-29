@@ -1,6 +1,6 @@
 import { Spacer } from "@nextui-org/spacer";
 import { sectionWrapper } from "../primitives";
-import { Content } from "@/ts/maketing/content";
+import { Content } from "@/ts/types/content";
 import RenderSpotlightCards from "../shared/render-spotlight-card";
 
 /**
