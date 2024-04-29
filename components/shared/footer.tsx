@@ -1,3 +1,4 @@
+"use client";
 import Link from "next/link";
 import config from "@/config";
 import { Logo } from "../ui/icons";

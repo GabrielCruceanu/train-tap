@@ -1,5 +1,4 @@
 const { nextui } = require("@nextui-org/theme");
-import plugin from "tailwindcss/plugin";
 
 /** @type {import('tailwindcss').Config} */
 module.exports = {

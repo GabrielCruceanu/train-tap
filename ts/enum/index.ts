@@ -20,3 +20,4 @@ export {
 } from "./onboarding.enum";
 export { InputError } from "./error.enum";
 export { TypeSettings as SettingsType } from "./settings.enum";
+export { SidebarItemType } from "./sidebar.enum";

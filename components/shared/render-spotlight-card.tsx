@@ -1,4 +1,4 @@
-import { Content } from "../../ts/maketing/content";
+import { Content } from "../../ts/types/content";
 import SpotlightCard from "./spotlight-card";
 
 /**

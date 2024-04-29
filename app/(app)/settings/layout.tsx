@@ -27,8 +27,8 @@ export default async function LayoutPrivate({
 
   return (
     <AppLayout
-      title="Dashboard"
-      subtitle="Your dashboard to manage your business."
+      title="Settings"
+      subtitle="Customize settings, email preferences, and web appearance."
     >
       {children}
     </AppLayout>
