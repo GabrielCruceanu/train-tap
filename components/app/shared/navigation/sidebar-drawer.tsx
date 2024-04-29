@@ -1,9 +1,7 @@
 "use client";
-import type { ModalProps } from "@nextui-org/react";
-
 import React from "react";
 import { TRANSITION_EASINGS } from "@nextui-org/framer-utils";
-import { Modal, ModalBody, ModalContent } from "@nextui-org/react";
+import { Modal, ModalBody, ModalContent, ModalProps } from "@nextui-org/modal";
 
 import { cn } from "@/utils/cn";
 

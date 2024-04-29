@@ -1,9 +1,9 @@
 "use client";
 
-import type { SwitchProps } from "@nextui-org/react";
+import { Switch, type SwitchProps } from "@nextui-org/switch";
 
 import React from "react";
-import { extendVariants, Switch } from "@nextui-org/react";
+import { extendVariants } from "@nextui-org/react";
 
 import { cn } from "@/utils/cn";
 

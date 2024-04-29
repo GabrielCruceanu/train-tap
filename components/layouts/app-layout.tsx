@@ -8,7 +8,7 @@ import { cn } from "@/utils/cn";
 import { AcmeIcon } from "../icons/social";
 import Sidebar from "../app/shared/navigation/sidebar";
 import { trainerSidebarItems } from "../app/shared/navigation/items";
-import { useDisclosure } from "@nextui-org/react";
+import { useDisclosure } from "@nextui-org/use-disclosure";
 import { Link } from "@nextui-org/link";
 import { Spacer } from "@nextui-org/spacer";
 import { Avatar } from "@nextui-org/avatar";

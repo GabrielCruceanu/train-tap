@@ -1,20 +1,5 @@
 "use client";
 
-import {
-  Dropdown,
-  DropdownItem,
-  DropdownMenu,
-  DropdownTrigger,
-  Table,
-  TableBody,
-  TableCell,
-  TableColumn,
-  TableHeader,
-  TableRow,
-  type ChipProps,
-  type Selection,
-} from "@nextui-org/react";
-
 import * as React from "react";
 import { ChevronDownIcon, SearchIcon } from "@nextui-org/shared-icons";
 import { capitalize } from "@nextui-org/shared-utils";
@@ -22,11 +7,26 @@ import { Icon } from "@iconify/react";
 
 import { columns, rolesOptions, statusOptions, users } from "@/data/team-data";
 import { User } from "@nextui-org/user";
-import { Chip } from "@nextui-org/chip";
+import { Chip, ChipProps } from "@nextui-org/chip";
 import { Button } from "@nextui-org/button";
 import { Input } from "@nextui-org/input";
 import { Tab, Tabs } from "@nextui-org/tabs";
 import { Card, CardBody } from "@nextui-org/card";
+import {
+  Dropdown,
+  DropdownItem,
+  DropdownMenu,
+  DropdownTrigger,
+} from "@nextui-org/dropdown";
+import {
+  TableBody,
+  TableCell,
+  TableColumn,
+  TableHeader,
+  TableRow,
+  Selection,
+  Table,
+} from "@nextui-org/table";
 
 interface TeamManageTableProps {
   className?: string;

@@ -1,7 +1,7 @@
-import type { RadioProps } from "@nextui-org/react";
+import { useRadio, type RadioProps } from "@nextui-org/radio";
 
 import React from "react";
-import { useRadio, VisuallyHidden } from "@nextui-org/react";
+import { VisuallyHidden } from "@nextui-org/react";
 
 import { cn } from "@/utils/cn";
 

@@ -1,4 +1,4 @@
-import { ListboxProps, ListboxSectionProps } from "@nextui-org/react";
+import { ListboxProps, ListboxSectionProps } from "@nextui-org/listbox";
 import { SidebarItemType } from "../enum";
 
 export type SidebarItem = {

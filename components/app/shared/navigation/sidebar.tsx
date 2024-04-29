@@ -1,6 +1,5 @@
 "use client";
 
-import { Accordion, AccordionItem, type Selection } from "@nextui-org/react";
 import React from "react";
 import { Icon } from "@iconify/react";
 
@@ -9,6 +8,8 @@ import { SidebarItem, SidebarProps } from "@/ts/types/sidebar";
 import { SidebarItemType } from "@/ts/enum";
 import { Listbox, ListboxItem, ListboxSection } from "@nextui-org/listbox";
 import { Tooltip } from "@nextui-org/tooltip";
+import { Accordion, AccordionItem } from "@nextui-org/accordion";
+import { Selection } from "@nextui-org/table";
 
 const Sidebar = React.forwardRef<HTMLElement, SidebarProps>(
   (
