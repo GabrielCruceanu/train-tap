@@ -7,8 +7,10 @@ import { Icon } from "@/components/ui/icons";
 import { PlanCustomRadio } from "@/components/app/shared/plan-custom-radio";
 import { Button } from "@nextui-org/button";
 import { Spacer } from "@nextui-org/spacer";
-import { RadioGroup, Select, SelectItem } from "@nextui-org/react";
 import { Input } from "@nextui-org/input";
+import { RadioGroup } from "@nextui-org/radio";
+import { Select } from "@nextui-org/select";
+import { SelectItem } from "@nextui-org/select";
 
 interface BillingSettingCardProps {
   className?: string;

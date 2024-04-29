@@ -2,17 +2,13 @@
 
 import { Accordion, AccordionItem, type Selection } from "@nextui-org/react";
 import React from "react";
-import {
-  Listbox,
-  Tooltip,
-  ListboxItem,
-  ListboxSection,
-} from "@nextui-org/react";
 import { Icon } from "@iconify/react";
 
 import { cn } from "@/utils/cn";
 import { SidebarItem, SidebarProps } from "@/ts/types/sidebar";
 import { SidebarItemType } from "@/ts/enum";
+import { Listbox, ListboxItem, ListboxSection } from "@nextui-org/listbox";
+import { Tooltip } from "@nextui-org/tooltip";
 
 const Sidebar = React.forwardRef<HTMLElement, SidebarProps>(
   (

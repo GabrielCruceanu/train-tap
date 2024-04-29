@@ -9,13 +9,13 @@ import { AcmeIcon } from "../icons/social";
 import Sidebar from "../app/shared/navigation/sidebar";
 import { trainerSidebarItems } from "../app/shared/navigation/items";
 import { useDisclosure } from "@nextui-org/react";
+import { Link } from "@nextui-org/link";
 import { Spacer } from "@nextui-org/spacer";
 import { Avatar } from "@nextui-org/avatar";
 import { Button } from "@nextui-org/button";
 import { Tooltip } from "@nextui-org/tooltip";
 import { usePathname } from "next/navigation";
 import { siteConfig } from "@/config/site";
-import { Link } from "@nextui-org/link";
 import { useSignOut } from "@/hooks/auth";
 
 /**
