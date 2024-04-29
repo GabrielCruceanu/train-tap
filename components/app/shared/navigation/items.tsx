@@ -1,5 +1,4 @@
-import { Chip } from "@nextui-org/react";
-import { Icon } from "@iconify/react";
+import { Chip } from "@nextui-org/chip";
 
 import { type SidebarItem } from "@/ts/types/sidebar";
 

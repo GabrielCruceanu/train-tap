@@ -4,7 +4,7 @@ import * as React from "react";
 import { cn } from "@/utils/cn";
 import { Input } from "@nextui-org/input";
 import { Spacer } from "@nextui-org/spacer";
-import { Select, SelectItem } from "@nextui-org/react";
+import { Select, SelectItem } from "@nextui-org/select";
 import { Button } from "@nextui-org/button";
 
 interface AccountSettingCardProps {

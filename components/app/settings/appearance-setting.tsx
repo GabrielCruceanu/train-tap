@@ -4,10 +4,8 @@ import * as React from "react";
 
 import { ThemeCustomRadio } from "../shared/theme-custom-radio";
 
-import SwitchCell from "@/components/app/shared/switch-cell";
 import { cn } from "@/utils/cn";
-import { RadioGroup, Select, SelectItem } from "@nextui-org/react";
-import { Spacer } from "@nextui-org/spacer";
+import { RadioGroup } from "@nextui-org/radio";
 import { useTheme } from "next-themes";
 import { useIsSSR } from "@react-aria/ssr";
 

@@ -5,7 +5,7 @@ import { Card, CardBody } from "@nextui-org/card";
 import { Avatar } from "@nextui-org/avatar";
 import { Icon } from "@iconify/react";
 import { cn } from "@/utils/cn";
-import { Badge } from "@nextui-org/react";
+import { Badge } from "@nextui-org/badge";
 import { Button } from "@nextui-org/button";
 import { Spacer } from "@nextui-org/spacer";
 import { Input, Textarea } from "@nextui-org/input";
