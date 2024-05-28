@@ -34,7 +34,7 @@ export const createCheckout = async ({
       {
         apiVersion: "2024-04-10", // TODO: update this when Stripe updates their API
         typescript: true,
-      },
+      }
     );
 
     const extraParams: {
@@ -100,7 +100,7 @@ export const createCustomerPortal = async ({
     {
       apiVersion: "2024-04-10", // TODO: update this when Stripe updates their API
       typescript: true,
-    },
+    }
   );
 
   const portalSession = await stripe.billingPortal.sessions.create({
@@ -119,7 +119,7 @@ export const findCheckoutSession = async (sessionId: string) => {
       {
         apiVersion: "2024-04-10", // TODO: update this when Stripe updates their API
         typescript: true,
-      },
+      }
     );
 
     const session = await stripe.checkout.sessions.retrieve(sessionId, {
@@ -127,6 +127,31 @@ export const findCheckoutSession = async (sessionId: string) => {
     });
 
     return session;
+  } catch (e: any) {
+    console.error(e);
+    return null;
+  }
+};
+
+// This is used to get the user subscription and populate the data so we get the planId the user subscribed to
+export const findSubscriptions = async (customerId: string) => {
+  try {
+    const stripe = new Stripe(
+      process.env.STRIPE_SECRET_KEY ? process.env.STRIPE_SECRET_KEY : "",
+      {
+        apiVersion: "2024-04-10", // TODO: update this when Stripe updates their API
+        typescript: true,
+      }
+    );
+
+    // const subscription = await stripe.subscriptions.retrieve(subscriptionId, {
+    //   expand: ["items.data.price"],
+    // });
+    const subscriptions = await stripe.subscriptions.list({
+      customer: customerId,
+    });
+
+    return subscriptions;
   } catch (e: any) {
     console.error(e);
     return null;

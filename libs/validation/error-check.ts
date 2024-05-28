@@ -1,3 +1,4 @@
+import { va } from '@vercel/analytics';
 import { AuthResponseError, ToastVariant } from "@/ts/enum";
 
 export const AuthErrorMessage = {
@@ -64,6 +65,32 @@ export const OnboardingMessage = {
       variant: ToastVariant.destructive,
     },
   },
+};
+
+export const UserMessage = {
+  UserName: {
+    Success: {
+      title: "Username",
+      description: "Username created successfully",
+      variant: ToastVariant.default,
+    },
+    Update: {
+      title: "Username",
+      description: "Username updated successfully",
+      variant: ToastVariant.default,
+    },
+    Error: {
+      title: "Error",
+      description: "Sorry, an error occurred",
+      variant: ToastVariant.destructive,
+    },
+  },
+  User: {
+    Success: {
+      title: "User",
+      description: "User created",
+      variant: ToastVariant.default,
+  }
 };
 export function checkErrorMessage(error: any) {
   console.log("error?.message", error?.message);
