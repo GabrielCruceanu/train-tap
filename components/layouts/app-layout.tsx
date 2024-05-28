@@ -17,6 +17,7 @@ import { Tooltip } from "@nextui-org/tooltip";
 import { usePathname } from "next/navigation";
 import { siteConfig } from "@/config/site";
 import { useSignOut } from "@/hooks/auth";
+import { TrainerTypeList } from "@/data/trainer-data";
 
 /**
  * This example requires installing the `usehooks-ts` and `lodash` packages.
@@ -123,7 +124,7 @@ export default function AppLayout({
                 Kate Moore
               </p>
               <p className="text-tiny font-medium text-default-400">
-                Customer Support
+                {TrainerTypeList[0]}
               </p>
             </div>
           </div>
@@ -244,7 +245,7 @@ export default function AppLayout({
       </SidebarDrawer>
 
       {/*  Content */}
-      <div className="w-full max-w-2xl flex-1 p-4">
+      <div className="w-full max-w-screen-2xl flex-1 p-4">
         {/* Title */}
         <div className="flex items-center gap-x-3">
           <Button

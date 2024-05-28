@@ -24,11 +24,11 @@ const CrispChat = (): null => {
   useEffect(() => {
     const getUser = async () => {
       const {
-        data: { session },
-      } = await supabase.auth.getSession();
+        data: { user },
+      } = await supabase.auth.getUser();
 
-      if (session?.user) {
-        setUser(session.user);
+      if (user) {
+        setUser(user);
       }
     };
     getUser();

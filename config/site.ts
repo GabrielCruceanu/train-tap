@@ -120,6 +120,10 @@ export const siteConfig = {
       },
     },
     application: {
+      onboarding: {
+        label: "Onboarding",
+        href: "/onboarding",
+      },
       dashboard: {
         label: "Dashboard",
         href: "/dashboard",
@@ -132,13 +136,17 @@ export const siteConfig = {
         label: "Workouts",
         href: "/workouts",
       },
+      nutrition: {
+        label: "Nutrition",
+        href: "/nutrition",
+      },
       profile: {
         label: "Profile",
         href: "/profile",
       },
-      team: {
-        label: "Team",
-        href: "/team",
+      clients: {
+        label: "Clients",
+        href: "/clients",
       },
       settings: {
         label: "Settings",
